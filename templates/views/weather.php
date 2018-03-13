@@ -2,9 +2,11 @@
 /**
  * @var $weatherByCity array
  */
-var_dump($weatherByCity);
+dump($weatherByCity);
 ?>
 <div>
     <h1>Погода</h1>
-    <p>. . . . . . .</p>
+    <p>
+        <?= $weather['name'] ?>;
+    </p>
 </div>
