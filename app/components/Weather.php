@@ -10,6 +10,7 @@ class Weather
     private function __construct($apiKey)
     {
      $this->apiKey = $apiKey;
+        throw new Exception('Ключ API не верный');
     }
 
     public function getWeatherByCity($city = 'Saint Petersburg,ru', $cache = false)
