@@ -7,9 +7,9 @@ class Weather
     const CACHE_DIR = 'weather';
     private $apiKey;
 
-    private function __construct($apiKey)
+    public function __construct($apiKey)
     {
-     $this->apiKey = $apiKey;
+        $this->apiKey = $apiKey;
         throw new Exception('Ключ API не верный');
     }
 

@@ -12,6 +12,8 @@
     <a href="<?= $this->route('weather')?>" class="btn">Погода</a>
 </div>
 
+<script scr="templates/assets/js/script/js"></script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

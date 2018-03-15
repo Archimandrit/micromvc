@@ -1,19 +1,9 @@
 <?php
-require_once 'app/models/User.php';
-require_once 'app/components/Weather.php';
-class Controller
 
+
+class MainController
 {
-    private function render($view, $title, $param = [])
-    {
-        extract($param);
-        require_once 'templates/layout.php';
-    }
 
-    public function route($route)
-    {
-        return '../micromvc/?act='.$route;
-    }
     public function homeAction()
     {
         $user = new User();
