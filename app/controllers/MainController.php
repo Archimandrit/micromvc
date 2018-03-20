@@ -1,7 +1,7 @@
 <?php
 
 
-class MainController
+class MainController extends Controller
 {
 
     public function homeAction()
@@ -35,16 +35,19 @@ class MainController
             'user' => $user,
         ]);
     }
-    public function weatherAction()
-    {
+    public function weatherAction() {
         $city = 'Saint Petersburg,ru';
-        try{
+        $weather1 = null;
+        try {
             $weather = new Weather('012e34537b328a78762f56bb13b7ac8c');
-        } catch (Exception $e) {
-            echo "Oshibka";
+            $weather1 = $weather->getWeatherByCity($city);
+        } catch (\Exception $e) {
+           echo 'OSHIBKA';
         }
+
         $this->render('weather.php', 'Погода', [
-            'weatherByCity' => $weather->getWeatherByCity($city),
+            'weather1' => $weather1,
+            //'weather2' => $weather->getWeatherByCoordinate(59.93863, 30.31413),
         ]);
     }
 }

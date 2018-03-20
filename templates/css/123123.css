@@ -37,8 +37,8 @@ a:hover {
     height: 100%;
 }
 .post {
-    width: 350px;
-    height: 350px;
+    width: 20%;
+    height: 20%;
     background-color: none;
     display: inline-block;
     margin: 10px 10px;
